@@ -22,8 +22,9 @@ const DeleteUserById = (id) => {
   });
 };
 
-export {
-  QueryUserById,
-  QueryListOfUsers,
-  DeleteUserById,
+const UpdateUserById = (query) => {
+  USER_FAKE_DATA.push(query);
+  return USER_FAKE_DATA;
 };
+
+export { QueryUserById, QueryListOfUsers, DeleteUserById, UpdateUserById };
