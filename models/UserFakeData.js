@@ -25,4 +25,4 @@ let USER_FAKE_DATA = [
   },
 ];
 
-module.exports = { USER_FAKE_DATA };
+export { USER_FAKE_DATA };

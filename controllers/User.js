@@ -1,8 +1,8 @@
-const {
+import {
   QueryListOfUsers,
   QueryUserById,
   DeleteUserById,
-} = require("../service/UserTable");
+} from "../service/UserTable.js";
 
 const GetAllUsers = (req, res) => {
   const userList = QueryListOfUsers();
@@ -27,7 +27,7 @@ const DeleteUser = (req, res) => {
   return res.json(user);
 };
 
-module.exports = {
+export {
   GetAllUsers,
   GetUser,
   DeleteUser,
