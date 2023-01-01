@@ -2,7 +2,7 @@ import {
   QueryListOfUsers,
   QueryUserById,
   DeleteUserById,
-  UpdateUserById
+  UpdateUserById,
 } from "../service/UserTable.js";
 
 const GetAllUsers = (req, res) => {
@@ -30,7 +30,7 @@ const DeleteUser = (req, res) => {
 
 const UpdateUser = (req, res) => {
   const query = {
-    id:req.body.id,
+    id: req.body.id,
     name: req.body.name,
     email: req.body.email,
     password: req.body.password,
@@ -41,11 +41,6 @@ const UpdateUser = (req, res) => {
 
   // DO SOMETHING WITH THE USER OR JUST RETURN IT
   return res.json(user);
-}
-
-export {
-  GetAllUsers,
-  GetUser,
-  DeleteUser,
-  UpdateUser
 };
+
+export { GetAllUsers, GetUser, DeleteUser, UpdateUser };
