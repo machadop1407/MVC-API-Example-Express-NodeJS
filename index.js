@@ -1,9 +1,9 @@
 // Make express server
-const express = require("express");
+import express from "express";
 const app = express();
 const port = process.env.PORT || 8080;
 
-const userRoutes = require("./routes/user");
+import userRoutes from "./routes/User.js";
 app.use("/user", userRoutes);
 
 app.listen(port, () => {

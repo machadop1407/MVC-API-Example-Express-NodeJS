@@ -1,4 +1,4 @@
-const { USER_FAKE_DATA } = require("../models/UserFakeData");
+import { USER_FAKE_DATA } from "../models/UserFakeData.js";
 
 // Returns User With Id
 const QueryUserById = (id) => {
@@ -22,8 +22,9 @@ const DeleteUserById = (id) => {
   });
 };
 
-module.exports = {
-  QueryUserById,
-  QueryListOfUsers,
-  DeleteUserById,
+const UpdateUserById = (query) => {
+  USER_FAKE_DATA.push(query);
+  return USER_FAKE_DATA;
 };
+
+export { QueryUserById, QueryListOfUsers, DeleteUserById, UpdateUserById };
